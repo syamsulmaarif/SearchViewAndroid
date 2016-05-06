@@ -36,6 +36,14 @@ public class CountriesDbAdapter {
                     KEY_REGION + "," +
                     " UNIQUE (" + KEY_CODE +"));";
 
+    private String []columns = {
+            KEY_ROWID,
+            KEY_CODE,
+            KEY_NAME,
+            KEY_CONTINENT,
+            KEY_REGION
+    };
+
     private static class DatabaseHelper extends SQLiteOpenHelper {
 
         DatabaseHelper(Context context) {
@@ -98,14 +106,12 @@ public class CountriesDbAdapter {
         Log.w(TAG, inputText);
         Cursor mCursor = null;
         if (inputText == null  ||  inputText.length () == 0)  {
-            mCursor = mDb.query(SQLITE_TABLE, new String[] {KEY_ROWID,
-                            KEY_CODE, KEY_NAME, KEY_CONTINENT, KEY_REGION},
+            mCursor = mDb.query(SQLITE_TABLE, columns,
                     null, null, null, null, null);
 
         }
         else {
-            mCursor = mDb.query(true, SQLITE_TABLE, new String[] {KEY_ROWID,
-                            KEY_CODE, KEY_NAME, KEY_CONTINENT, KEY_REGION},
+            mCursor = mDb.query(true, SQLITE_TABLE, columns,
                     KEY_NAME + " like '%" + inputText + "%'", null,
                     null, null, null, null);
         }
