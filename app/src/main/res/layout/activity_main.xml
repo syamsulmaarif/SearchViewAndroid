@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/app_bar"
+        android:id="@+id/my_toolbar"/>
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:padding="10dp"
+        android:text="@string/some_text" android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add Country"/>
+
+    <!--<EditText android:id="@+id/myFilter" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:ems="10"
+        android:hint="@string/search_hint">
+        <requestFocus />
+    </EditText>-->
+
+    <ListView android:id="@+id/listView1" android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

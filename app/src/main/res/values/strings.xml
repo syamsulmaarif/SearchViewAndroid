@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">ListView CusrsorAdapter</string>
+    <string name="some_text">Some North American Countries!</string>
+    <string name="app_label">Search New</string>
+    <string name="search_hint">Type here to filter&#8230;</string>
+    <string name="search">search</string>
+    <string name="my_title_main">SqliteSearch2</string>
+    <string name="my_subtitle_main">Aplikasi Pencarian</string>
+
+</resources>
